@@ -1,0 +1,190 @@
+/* 
+ 	#FDFDFD  white
+	#111010 	black
+
+*/
+
+b {
+	color: #FDFDFD
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #111010;
+	color: #FDFDFD;
+  }
+
+h1 {
+	font-size: 35px;
+}
+
+.h2 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 20px;
+	justify-content: start;
+}
+
+  .container {
+	padding: 10%;
+	padding-left: 25%;
+	padding-right: 25%;
+	justify-content: space-between;
+	z-index: 3;
+  }
+
+
+  .sidenav {
+	width: 130px;
+	position: fixed;
+	z-index: 1;
+	top: 30%;
+	left: 5%;
+	background: #111010;
+	overflow-x: hidden;
+	padding: 8px 0;
+  }
+  
+  .sidenav a {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #b6b5b5;
+	display: block;
+  }
+  
+  .sidenav a:hover {
+	animation: act 0.2s ease-in 0s forwards;
+  }
+
+  @keyframes act {
+	0% {
+		color: #b6b5b5;
+	}
+	100% {
+		color: #FDFDFD;
+		text-shadow: rgba(255,255,255,1) 0px 0px 19px;
+
+
+	}
+  }
+  
+  .active {
+	background-color: #373636;
+	border-radius: 10px;
+  }
+
+  .main {
+	margin-left: 140px;
+	font-size: 20px; 
+	padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+
+
+  .card {
+	width: 300px;
+	height: 550px;
+	background: #111010;
+	border: solid #373636;
+  }
+  
+  .card_image{
+	width: 100%;
+	height: 50%;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	background: linear-gradient(#e66465, #9198e5);
+	display: flex;
+	align-items: top;
+	justify-content: right;
+  }
+
+  .card_title{
+	margin: 20px;
+  }
+  
+  .card_tag {
+	width: fit-content; 
+	padding: 10px;
+	background-color: #373636;
+	border-radius: 10px;
+	align-items: start;
+	justify-content: left;
+	margin: 10px;
+	margin-left: 20px;
+	vertical-align: middle;
+	display: inline-block;
+  }
+
+  .card_tag svg {
+	display: inline-block;
+	vertical-align: middle;
+	fill: #FDFDFD;
+	width: 24px;
+	height: 24px;
+  }
+  
+  .card:hover {
+	animation: float 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+  }
+
+  .card a{
+	text-decoration: none;
+	color: #FDFDFD;
+  }
+
+  .grid-container {
+	display: grid;
+	grid-template-rows: auto auto;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+	padding: 10px;
+  }
+
+
+  @keyframes float {
+	from {
+		transform: translatey(0px);
+		border: solid #373636;
+	}
+	to {
+		transform: translatey(-30px);
+		border: solid #b6b5b5;
+	}
+}
+
+svg:hover {
+	animation: shine 1s ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes shine {
+	0% {
+		fill: #FDFDFD;
+	}
+
+	25% {
+		fill: #b6b5b5;
+	}
+	
+	50% {
+		fill: #585757;
+	}
+
+	75% {
+		fill: #b6b5b5;
+	}
+	100% {
+		fill: #FDFDFD;
+	}
+}
